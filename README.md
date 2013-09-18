@@ -2,7 +2,7 @@ Amazon Connect Demo
 ===========
 What is Amazon Connect Demo?
 ----------------
-Amazon Connect Demo is a sample web application in order to learn the 
+Amazon Connect Demo is a sample web application in order to learn how to use the Amazon login
 
 App Dependencies
 ----------------
