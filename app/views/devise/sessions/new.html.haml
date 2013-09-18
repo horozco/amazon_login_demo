@@ -1,0 +1,27 @@
+%h2 Sign in with Amazon
+= render "home/amazon_sdk"
+%a#LoginWithAmazon{:href => "#"}
+  %img{:alt => "Login with Amazon", :border => "0", :height => "32", :src => "https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png", :width => "156"}/
+
+:javascript
+  document.getElementById('LoginWithAmazon').onclick = function() {
+    options = { scope : 'profile' };
+    amazon.Login.authorize(options, 'https://localhost:3000/home');
+    return false;
+  };
+/ %h2 Sign in
+/ = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+/   %div
+/     = f.label :email
+/     %br/
+/     = f.email_field :email, :autofocus => true
+/   %div
+/     = f.label :password
+/     %br/
+/     = f.password_field :password
+/   - if devise_mapping.rememberable?
+/     %div
+/       = f.check_box :remember_me
+/       = f.label :remember_me
+/   %div= f.submit "Sign in"
+/ = render "devise/shared/links"

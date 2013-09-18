@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+  pool: 5
+
+development:
+  <<: *default
+  database: amazon_login_development
+
+test:
+  <<: *default
+  database: amazon_login_test
+
+production:
+  <<: *default
+  database: amazon_login_production

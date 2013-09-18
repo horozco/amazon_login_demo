@@ -1,0 +1,16 @@
+%h1 :) Perfect! :)
+%p The amazon login has been succesfully - The user information retrieved from Amazon is:
+%table.table
+  %thead
+    %tr
+      %th User Name
+      %th User Email
+      %th User Amazon Id
+  %tbody
+    %tr
+      %td
+        = @user.full_name
+      %td
+        = @user.email
+      %td
+        = @user.amazon_id
